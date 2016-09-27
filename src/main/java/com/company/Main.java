@@ -3,7 +3,6 @@ import com.google.maps.ElevationApi;
 import com.google.maps.GeoApiContext;
 import com.google.maps.model.ElevationResult;
 import com.google.maps.model.LatLng;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 public class Main {
@@ -16,7 +15,6 @@ public class Main {
         }catch (Exception ioe){
             System.out.println("No key file found, or could not be read.");
             System.exit(-1);}
-
             GeoApiContext context = new GeoApiContext().setApiKey(key);
 //44.973074, -93.283356
             LatLng mctcLatLng = new LatLng(44.973074, -93.283356);
