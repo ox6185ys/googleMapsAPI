@@ -1,9 +1,9 @@
 package com.company;
 import com.google.maps.ElevationApi;
 import com.google.maps.GeoApiContext;
-import com.google.maps.PendingResult;
 import com.google.maps.model.ElevationResult;
 import com.google.maps.model.LatLng;
+
 import java.io.BufferedReader;
 import java.io.FileReader;
 public class Main {
@@ -18,8 +18,8 @@ public class Main {
             System.exit(-1);}
 
             GeoApiContext context = new GeoApiContext().setApiKey(key);
+//44.973074, -93.283356
             LatLng mctcLatLng = new LatLng(44.973074, -93.283356);
-
         ElevationResult[] results = new ElevationResult[0];
         try {
             results = ElevationApi.getByPoints(context, mctcLatLng).await();
@@ -30,7 +30,6 @@ public class Main {
                 ElevationResult mctcElevation = results[0];
                 System.out.println("The elevation of MCTC is "+mctcElevation.elevation+" meters.");
                 System.out.println(String.format("The elevation of MCTC above sea level is %.2f meters",mctcElevation.elevation));
-            }
-        }
-    }
-
+           }
+     }
+}
