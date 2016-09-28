@@ -3,21 +3,22 @@ import com.google.maps.ElevationApi;
 import com.google.maps.GeoApiContext;
 import com.google.maps.GeocodingApiRequest;
 import com.google.maps.model.*;
-import java.io.BufferedReader;
+import java.io.BufferedReader;//import Bufferedreader for key.txt
 import java.io.FileReader;
 import java.util.Scanner;
-
+//week6 geocoding
 public class Main {
+
     static Scanner stringScanner = new Scanner(System.in);
     static Scanner numberScanner = new Scanner(System.in);
-//week6 geocoding
-//import Bufferedreader for key.txt
-    public static void main(String[] args) throws Exception{
-        String key = null;
+
+    public static void main(String[] args)throws Exception{
+
+        String key = null;//The following try/catch will throw an exception if my key.txt file is FUBAR.
         try{
             BufferedReader reader = new BufferedReader(new FileReader("key.txt"));
-            key = reader.readLine();
-            System.out.println(key);
+            key = reader.readLine();//This holds the contents of key.txt if it exists.
+            System.out.println(key);//This prints my key if it exists.
         }
         catch (Exception ioe){
             System.out.println("No key file found, or could not be read.");
@@ -52,7 +53,7 @@ public class Main {
 
 
 
-
+//Below is the beginning project which I borrowed from to make the above.
 
         //        System.out.println(String.format("The elevation of MCTC above sea level is %.2f meters",mctcElevation.elevation));
 /*        System.out.println("Enter a location to see LatLng.");
