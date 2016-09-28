@@ -30,6 +30,7 @@ public class Main {
         String location = stringScanner.nextLine();
         //String baseURL = String.format("https://maps.googleapi.com/maps/api/geocode/json?address=%s&key=%s", location, key);
 
+        //geocodingResultsArray
         GeocodingResult[] geocodingResultsArray = locationRequest.address(location).await();
         //System.out.println(baseURL);
         //System.out.println(geocodingResults[0]);
