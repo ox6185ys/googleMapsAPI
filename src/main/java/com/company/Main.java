@@ -38,6 +38,8 @@ public class Main {
         Bounds bounds = new Geometry().bounds;
         System.out.println(locationRequest);
 
+        //todo loop over geocodingResultsArray.  formattedAddress.
+
         if (geocodingResultsArray.length > 0) {
             GeocodingResult firstGeocodingResult = geocodingResultsArray[0];
             LatLng latlong = firstGeocodingResult.geometry.location;//geometry and location are tags under "GeocodingResult".
