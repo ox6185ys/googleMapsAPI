@@ -13,6 +13,7 @@ public class Main {
     static Scanner numberScanner = new Scanner(System.in);
 
     public static void main(String[] args)throws Exception{
+//https://developers.google.com/maps/documentation/geocoding/intro
 
         String key = null;//The following try/catch will throw an exception if my key.txt file is FUBAR.
         try{
